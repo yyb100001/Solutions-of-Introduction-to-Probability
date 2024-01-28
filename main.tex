@@ -5,6 +5,7 @@
 \usepackage{geometry}
 \usepackage{listings}
 \usepackage{xcolor}
+\usepackage{fancyhdr,url}
 \geometry{left=2cm,right=2cm,top=2cm,bottom=2cm}
 \hypersetup{
 colorlinks=true,
@@ -31,7 +32,20 @@ linkcolor=black
   breaklines=true,
   breakatwhitespace=true,
 }
-
+\fancypagestyle{fancy-license-info}{%
+  \fancyhf{}
+  \fancyhead[L]{\footnotesize{\leftmark }} 
+  \fancyfoot[L]{%
+    {\href{http://creativecommons.org/licenses/by-nc-sa/4.0/}{\includegraphics[scale=0.5]{license.eps}}}\hspace{0.1em}%
+    \begin{minipage}[b][4ex][t]{30em}
+        \footnotesize{本文采用 CC-BY-4.0 授权协议，答案发布于：\\
+        \url{https://github.com/yyb100001/Solutions-of-Introduction-to-Probability}\\}
+    \end{minipage}
+  }
+  \fancyfoot[R]{\footnotesize{第 \thepage 页}}
+  \renewcommand{\footrulewidth}{0.4pt}
+}
+\pagestyle{fancy-license-info}
 \title{\vspace*{-3cm}\textbf{何书元《概率引论》答案}}
 \author{闫一博}
 \date{2024年}
